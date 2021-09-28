@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Moon Star Apparels|Home</title>
+   <link rel="stylesheet" href="home.css">
+   <link rel="stylesheet" href="./CSS/header.css">
+   <link rel="stylesheet" href="./CSS/footer.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+      .mySlides {
+         display: none;
+      }
+   </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+   <div id="header">
+      <div id="logo">
+         <img src="images/shoplogo3.jpg" alt="Moonstar_logo">
+
+         <div id="h">Moon Star Apperals</div>
+      </div>
+      <div id="nav">
+         <a href="home.html">Home</a>
+         <a href="about.html">About</a>
+         <a href="services.html">Services</a>
+         <a href="product.html">Product</a>
+         <a href="contact.html">Contact</a>
+         <a href="./login.html"><i class="fa fa-sign-out" style="font-size:30px;color:black;"></i></a>
+      </div>
+      <div id="clear"></div>
+
+   </div>
+   <div id="lside" class="scale">
+      <a href="product.html">
+         <h2>Products</h2>
+         <h3>Wedding attire for Groom</h3>
+         <ul>
+            <li>Sherwanies</li>
+            <li>Suits</li>
+            <li>Prince suits</li>
+            <li>kurtas</li>
+         </ul>
+         <h3>Casual wear for men</h3>
+         <ul>
+            <li>Casual suits</li>
+            <li>Casual shirts and pants</li>
+            <li>Jhubbas</li>
+
+         </ul>
+         <h3>Uniforms</h3>
+         <ol>
+            <li>Uniforms for schools</li>
+            <li>Uniform for collages</li>
+            <li>Uniform for Resturents and hotels</li>
+
+         </ol>
+
+      </a>
+
+   </div>
+
+   <div id="sec">
+
+
+      <img src="images/s1.jpg" class="mySlides" style="width:100%; height:100%">
+      <img src="images/s2.jpg" class="mySlides" style="width:100%; height:100%">
+      <img src="images/s3.jpg" class="mySlides" style="width:100%; height:100%">
+
+
+      <div class="text">MoonStar Apperals</div>
+      <script>
+         var myIndex = 0;
+         slides();
+
+         function slides() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(slides, 3000); // Change image every 3 seconds
+         }
+      </script>
+   </div>
+   <br>
+
+   </div>
+
+   <!--***********************************************************************************************************8-->
+   <div id="sec1">
+      <p> We provide a range of professional apperal services to meet Client needs. We are dedicated to providing a
+         service with the highest level of satisfaction.</p>
+      <div id="s1">-Moonstar Apperals</div>
+   </div>
+   <div class="scale" id="main1" >
+      <a href="product.html"> <img src="images/sh6.jpg"></a>
+      <a id="a2" href="product.html"> Sherwanies for Groom</a>
+   </div>
+   <div  class="scale" id="main2">
+      <a href="product.html"> <img src="images/su10.jpg"></a>
+      <a id="a3" href="product.html">Suits for Men</a>
+   </div>
+   <div class="scale" id="main3">
+      <a href="product.html"> <img src="images/bun11.jpg"></a>
+      <a id="a2" href="product.html">Prince Suits for Men</a>
+   </div>
+   <div class="scale" id="main4">
+      <a href="product.html"> <img src="images/b6.jpg"></a>
+      <a id="a4" href="product.html">Bandis for Men</a>
+   </div>
+   <div  class="scale" id="main5">
+      <a href="product.html"> <img src="images/k1 (7).jpg"></a>
+      <a id="a2" href="product.html"> kurtas and Jhubbas for men </a>
+   </div>
+   <div  class="scale" id="main6">
+      <a href="product.html"> <img src="images/sc1.jpg"></a>
+      <a id="a6" href="product.html" style="margin-left: 7%;">Uniform for schools and collages</a>
+   </div>
+   <div  class="scale" id="main7">
+      <a href="product.html"> <img src="images/sc4.jpg"></a>
+      <a id="a7" href="product.html" style="margin-right: 7%;"> Uniform for resturents and hotels</a>
+   </div>
+   <div id="footer">
+      <div id="fl">
+         <h2 id="fh">Please free to get in touch</h2>
+
+         <h2><i style="color: white;">business</i> Address : MoonStar Appearls,kollegal</h2>
+         <h2><i style="color: rgb(0, 172, 0);">call</i> Contact : #1234567890</h2>
+         <h2><i style="color: rgb(184, 1, 1);">email</i> Email : syedabdurrahaman@gmail.com</h2>
+      </div>
+      <div id="fr">
+         <a href="home.html">Home</a>
+         <a href="about.html">About</a>
+         <a href="services.html">Services</a>
+         <a href="contact.html">Contact Us</a>
+
+      </div>
+   </div>
+   <div id="info">
+      &copy;Moonstarapparels.com | Developed By Syed Abdur Rahaman
+   </div>
+
+
+</body>
+
+</html>

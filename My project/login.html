@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content=" one line description">
+    <meta name="keywords" content="relevant tags sepereated by comma">
+    <meta name="author" content="sar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./login.js"></script>
+    <link rel="stylesheet" href="CSS/login.css">
+</head>
+
+<body>
+    <div class="bg-img">
+        <div class="content">
+            <header>Login Form</header>
+            <form action="home.html" onsubmit="return validateForm()" novalidate>
+                <div class="field">
+
+                    <input type="text" style="padding: 20px;" id="name" onblur="nameValidation()" 
+                        placeholder="Email or Phone">
+                </div>
+                <div class="pass" style="color: yellow;">
+                    <span id="err1" ></span>
+                </div>
+
+                <div class="field space">
+
+                    <input type="password" class="pass-key" id="pass" onblur="passValidation()" style="padding: 20px;"
+                        placeholder="Password">
+
+                    <span id="show" class="show" >SHOW</span><br>
+                   
+                </div>
+                <div class="pass" style="color: yellow;">
+                    <span id="err2" ></span>
+                </div>
+                <div class="pass">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <div class="field">
+                    <input type="submit" value="LOGIN">
+                </div>
+            </form>
+
+            <br>
+<a href="home.html" style="text-decoration: none;color: yellow;">Skip Login</a>
+        </div>
+
+    </div>
+
+    <script>
+        //name validation
+        let nameNode = document.getElementById("name");
+        let spanNode1=document.getElementById("err1");
+        function nameValidation() {
+            let name = nameNode.value;
+            spanNode1.innerHTML="";
+           
+            if (name == '') {
+                spanNode1.innerHTML = "This field is required";
+                nameNode.style.border = "3px solid yellow";
+                return false;
+            } else {
+                nameNode.style.border = "3px solid green";
+                return true;
+            }
+        }
+        
+        // password validation
+        let passNode = document.getElementById("pass");
+        let spanNode2=document.getElementById("err2");
+        let regExp = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])");
+
+        function passValidation() {
+            let pass = passNode.value;
+            spanNode2.innerHTML="";
+            if (pass == '') {
+                spanNode2.innerHTML = "This field is required";
+                passNode.style.border = "3px solid yellow";
+                return false;
+            } 
+            else if (pass.length < 4 || pass.length > 8) {
+                spanNode2.innerHTML = "Password should be 4 to 8 characters long";
+                passNode.style.border = "3px solid yellow";
+                return false;
+            }
+
+            else if (regExp.test(pass) == false) {
+                spanNode2.innerHTML = "Password should be Alphaneumaric with special symbol";
+                passNode.style.border = "3px solid yellow ";
+                return false;
+            }
+            else {
+               passNode.style.border = "3px solid green";
+               return true;
+            }
+        }
+
+        function validateForm(){
+let v1=nameValidation();
+let v2=passValidation();
+
+
+return (v1&&v2);
+      
+}
+       
+
+    </script>
+</body>
+
+</html>
